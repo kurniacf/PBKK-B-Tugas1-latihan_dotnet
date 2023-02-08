@@ -1,0 +1,36 @@
+﻿<Window x:Class="tugas1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Financial App" Height="450" Width="800"
+        Background="#ADD8E6">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Margin="5" Content="Description" Foreground="Black"/>
+        <Border Grid.Row="0" Grid.Column="1" Margin="5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5">
+            <TextBox x:Name="descriptionTextBox" Margin="5" Background="#C6E2FF"/>
+        </Border>
+        <Label Grid.Row="1" Grid.Column="0" Margin="5" Content="Amount" Foreground="Black"/>
+        <Border Grid.Row="1" Grid.Column="1" Margin="5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5">
+            <TextBox x:Name="amountTextBox" Margin="5" Background="#C6E2FF"/>
+        </Border>
+        <Button x:Name="addButton" Grid.Row="2" Grid.Column="0" Margin="5" Content="Add" Click="AddButton_Click" Background="#00BFFF"/>
+        <Button x:Name="editButton" Grid.Row="2" Grid.Column="1" Margin="5" Content="Edit" Click="EditButton_Click" Background="#00BFFF"/>
+        <Button x:Name="deleteButton" Grid.Row="2" Grid.Column="2" Margin="5" Content="Delete" Click="DeleteButton_Click" Background="#00BFFF"/>
+        <Label Grid.Row="3" Grid.ColumnSpan="3" Margin="5" Content="Transactions" Foreground="Black"/>
+        <ListBox x:Name="transactionsListBox" Grid.Row="4" Grid.ColumnSpan="3" Margin="5" BorderBrush="LightGray" BorderThickness="1"/>
+    </Grid>
+</Window>
