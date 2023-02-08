@@ -88,7 +88,7 @@ namespace tugas1
 
     public class Transaction
     {
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public decimal Amount { get; set; }
 
         public override string ToString()
